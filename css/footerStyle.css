@@ -1,0 +1,21 @@
+a{
+    
+}
+
+
+#neverForgotten{
+ background-image: image-set(url(../media/icons/neverForgotten.png));
+}
+#GrandmasKitches{
+background-image: image-set(url(../media/icons/grandmasKitchen.png));
+
+}
+#home{
+    background-image: image-set(url(../media/icons/home.png));
+}
+#TheFamily{
+    background-image: image-set(url(../media/icons/theFamily.png));
+}
+#cantactactUs{
+    background-image: image-set(url(../media/icons/contackUs.png));
+}
