@@ -1,6 +1,22 @@
-Capstone
-Cohort 2024-RTT-119
-Aaron Santiago
+# Project Title
 
-Currently the cohort is to be a interactable cookbook in memory of my late grandmother.
-I will include a few of her recipes and family stories.
+SBA-316
+
+## Description
+
+A skill based assesssment based around the manipulation of the DOM.
+For the sake of creativity I replicated a portion of the assessment instructions including an additional poll at the bottom.
+
+## Getting Started
+
+### Installing
+
+Clone the repo documents.
+
+### Executing program
+
+Run via a "Live Serer" extention.
+
+## Authors
+
+By Aaron Santiago

@@ -4,24 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>SBA-316</title>
 </head>
+<!-- HTML for header/body test/table begin-->
 <body>
-    <div id="main">
-        <div id="navBar">
-            <a href="">Home</a>
-            <a href="">Time Line</a>
-            <div id="logo"></div>
-            <a href="">History</a>
-            <a href="">Contact Us</a>
-        </div>
-        <div id="mid">
-
-        </div>
-        <div id="footer">
-
-        </div>
+    <div id="wrap">
+      <div id="header">
+        <h1>"SBA-316"</h1>
+      </div>
+      <div class="whatMustBeDone"> </div>
+      <table id="tableContainer"></table>
+<!-- HTML for header/body text/table end -->
+<!-- HTML for footer/poll begin -->
+      <div id="footer">
+        
+        <div class="container">
+          <h1 class="poll-question">
+            Is my work satisfactory?
+          </h1>
+          <form id="question" class="question">
+              <label>
+                  <input type="radio" name="vote" value="yes"> Yes
+              </label>
+              <label>
+                  <input type="radio" name="vote" value="no"> No
+              </label>
+              <button type="submit"
+                      class="vote-button">
+                Vote
+              </button>
+          </form>
+          <div id="results" class="results">
+              <h2 class="results-title">
+                Results
+              </h2>
+              <div class="results-count">
+                  <p>Yes: 
+                    <span id="yes-count"
+                          class="count">0
+                    </span>
+                  </p>
+                  <p>No: 
+                    <span id="no-count"
+                               class="count">0
+                    </span>
+                  </p>
+              </div>
+          </div>
+      </div>
+      </div>
+<!-- HTML for footer/poll end -->
     </div>
-</body>
-<script> src = main.js </script>
+    <div id="ByAaronSantiago"> </div>
+  </body>
+<!-- JS is sorced into HTML -->
+<script src="main.js">
+</script>
 </html>
+<!-- END OF LINE -->
