@@ -37,3 +37,13 @@ const buttonAnimation = document.querySelector('.icon');
   
   
   // updateBatteryStatus(); 
+
+  // pop up
+  setTimeout(function() {
+    document.getElementById('popup').style.display = 'block';
+
+  
+    setTimeout(function() {
+      document.getElementById('popup').style.display = 'none';
+    }, 5000);
+  }, 2000);
