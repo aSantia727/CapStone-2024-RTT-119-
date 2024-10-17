@@ -1,49 +1,32 @@
 const TitleCard = document.getElementById('appName');
 
 if (TitleCard) {
-  // Add class to TitleCard
-  TitleCard.classList.add('theName');
+  TitleCard.classList.add('theName'); 
 }
 
-const buttonAnimation = document.querySelector('.icon');
+// Battery Status (You can uncomment if you want to use this functionality)
+const battery = navigator.battery;
 
-  if (buttonAnimation) {
-    buttonAnimation.addEventListener('mouseover', function() {
-      this.style.transition = 'background-image 1.5s ease';
-      this.style.backgroundImage = 'url("matrix.gif")'; 
-    });
-
-    buttonAnimation.addEventListener('mouseout', function() {
-      this.style.transition = '';
-      this.style.backgroundImage = '';
-    });
-  } else {
-    console.error('Element with ID "buttonAnimation" not found.');
-  }
-  const battery = navigator.battery;
-
-  function updateBatteryStatus() {
-    const batteryStatusElement = document.getElementById('battery-status');
+function updateBatteryStatus() {
+  const batteryStatusElement = document.getElementById('battery-status');
+  if (batteryStatusElement) {
     batteryStatusElement.textContent = `Charging: ${battery.charging ? 'Yes' : 'No'}
-  Level: ${battery.level.toFixed(2) * 100}%
-  Charging Time: ${battery.chargingTime ? battery.chargingTime.toFixed(0) + ' seconds' : 'N/A'}
-  Discharging Time: ${battery.dischargingTime ? battery.dischargingTime.toFixed(0) + ' seconds' : 'N/A'}`;
+    Level: ${battery.level.toFixed(2) * 100}%
+    Charging Time: ${battery.chargingTime ? battery.chargingTime.toFixed(0) + ' seconds' : 'N/A'}
+    Discharging Time: ${battery.dischargingTime ? battery.dischargingTime.toFixed(0) + ' seconds' : 'N/A'}`;
   }
-  
-  // battery.addEventListener('chargingchange', updateBatteryStatus);
-  // battery.addEventListener('levelchange', updateBatteryStatus);
-  // battery.addEventListener('chargingtimechange', updateBatteryStatus);
-  // battery.addEventListener('dischargingtimechange', updateBatteryStatus);   
-  
-  
-  // updateBatteryStatus(); 
+}
 
-  // pop up
-  setTimeout(function() {
-    document.getElementById('popup').style.display = 'block';
+// battery.addEventListener('chargingchange', updateBatteryStatus);
+// battery.addEventListener('levelchange', updateBatteryStatus);
+// battery.addEventListener('chargingtimechange', updateBatteryStatus);
+// battery.addEventListener('dischargingtimechange', updateBatteryStatus);   
 
-  
-    setTimeout(function() {
-      document.getElementById('popup').style.display = 'none';
-    }, 5000);
-  }, 2000);
+
+// updateBatteryStatus(); 
+
+// Bootstrap Modal
+var myModal = new bootstrap.Modal(document.getElementById('popup'));
+setTimeout(function() {
+  myModal.show(); 
+}, 2000);
